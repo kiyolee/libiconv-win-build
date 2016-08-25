@@ -1,4 +1,8 @@
-build*/libiconv/Release
+build*/iconv/Debug
+build*/iconv/Release
+build*/iconv/x64/Debug
+build*/iconv/x64/Release
 build*/libiconv/Debug
-build*/libiconv/x64/Release
+build*/libiconv/Release
 build*/libiconv/x64/Debug
+build*/libiconv/x64/Release
