@@ -7,6 +7,8 @@ fromcode="$3"
 tocode="$4"
 set -e
 $bindir/iconv -f "$fromcode" -t "$tocode"//TRANSLIT < "${srcdir}"/"$file"."$fromcode" > tmp
-cmp "${srcdir}"/"$file"."$tocode" tmp
+cmp -s "${srcdir}"/"$file"."$tocode" tmp
+rc=$?
 rm -f tmp
+[ $rc -ne 0 ] && exit $rc
 exit 0

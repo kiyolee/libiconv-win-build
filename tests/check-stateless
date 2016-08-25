@@ -15,7 +15,8 @@ $bindir/table-from "$charset" > tmp-"$charsetf".TXT
 $bindir/table-to "$charset" | sort > tmp-"$charsetf".INVERSE.TXT
 
 # Check 1: charmap and iconv forward should be identical.
-cmp "${srcdir}"/"$charsetf".TXT tmp-"$charsetf".TXT 2> /dev/null
+cmp -s "${srcdir}"/"$charsetf".TXT tmp-"$charsetf".TXT
+rc1=$?
 
 # Check 2: the difference between the charmap and iconv backward.
 sed -e '/	.* 0x/d' < "${srcdir}"/"$charsetf".TXT > tmp-noprecomposed-"$charsetf".TXT
@@ -24,9 +25,12 @@ if test -f "${srcdir}"/"$charsetf".IRREVERSIBLE.TXT; then
 else
   cp tmp-noprecomposed-"$charsetf".TXT tmp-orig-"$charsetf".INVERSE.TXT
 fi
-cmp tmp-orig-"$charsetf".INVERSE.TXT tmp-"$charsetf".INVERSE.TXT 2> /dev/null
+cmp -s tmp-orig-"$charsetf".INVERSE.TXT tmp-"$charsetf".INVERSE.TXT
+rc2=$?
 
 rm -f tmp-"$charsetf".TXT tmp-"$charsetf".INVERSE.TXT tmp-noprecomposed-"$charsetf".TXT tmp-orig-"$charsetf".INVERSE.TXT
+[ $rc1 -ne 0 ] && exit $rc1
+[ $rc2 -ne 0 ] && exit $rc2
 exit 0
 # For a new encoding:
 # You can create the "$charsetf".TXT like this:

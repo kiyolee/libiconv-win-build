@@ -9,8 +9,12 @@ set -e
 charsetf=`echo "$charset" | sed -e 's,:,-,g'`
 
 $bindir/iconv -f "$charset" -t UTF-8 < "${srcdir}"/"$charsetf"-snippet > tmp-snippet
-cmp "${srcdir}"/"$charsetf"-snippet.UTF-8 tmp-snippet
+cmp -s "${srcdir}"/"$charsetf"-snippet.UTF-8 tmp-snippet
+rc1=$?
 $bindir/iconv -f UTF-8 -t "$charset" < "${srcdir}"/"$charsetf"-snippet.UTF-8 > tmp-snippet
-cmp "${srcdir}"/"$charsetf"-snippet tmp-snippet
+cmp -s "${srcdir}"/"$charsetf"-snippet tmp-snippet
+rc2=$?
 rm -f tmp-snippet
-exit 0
+[ $rc1 -ne 0 ] && exit $rc1
+[ $rc2 -ne 0 ] && exit $rc2
+exit $rc
