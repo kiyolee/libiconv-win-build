@@ -1,0 +1,4 @@
+build*/libiconv/Release
+build*/libiconv/Debug
+build*/libiconv/x64/Release
+build*/libiconv/x64/Debug
