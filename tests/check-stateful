@@ -17,4 +17,4 @@ rc2=$?
 rm -f tmp-snippet
 [ $rc1 -ne 0 ] && exit $rc1
 [ $rc2 -ne 0 ] && exit $rc2
-exit $rc
+exit 0

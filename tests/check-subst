@@ -140,6 +140,9 @@ fi
 # wcrtomb() doesn't exist on FreeBSD 4.0 and is broken on MacOS X 10.3.
 # So far this has been tested only on a glibc system with !__STDC_ISO_10646__.
 
+rc10=0
+rc11=0
+rc12=0
 if false && test "`(locale charmap) 2>/dev/null`" = UTF-8; then
   cat > tmp-in <<\EOF
 Russian (Русский)
@@ -162,8 +165,6 @@ Russian («00000420»«00000443»«00000441»«00000441»«0000043a»«00000438�
 EOF
     cmp -s tmp-out1 tmp-ok
     rc12=$?
-  else
-    rc12=0
   fi
 fi
 
