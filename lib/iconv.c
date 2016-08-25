@@ -591,7 +591,7 @@ const char * iconv_canonicalize (const char * name)
   return name;
 }
 
-LIBICONV_DLL_EXPORTED int _libiconv_version = _LIBICONV_VERSION;
+LIBICONV_API int _libiconv_version = _LIBICONV_VERSION;
 
 #if defined __FreeBSD__ && !defined __gnu_freebsd__
 /* GNU libiconv is the native FreeBSD iconv implementation since 2002.
