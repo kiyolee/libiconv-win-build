@@ -1,7 +1,7 @@
 #!/bin/sh
 # Check of --unicode-subst, --byte-subst, --widechar-subst options.
 set -e
-iconv=../src/iconv_no_i18n
+iconv=$bindir/iconv
 # Make sure the charset.alias file is found.
 CHARSETALIASDIR=../lib
 export CHARSETALIASDIR

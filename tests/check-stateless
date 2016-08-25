@@ -9,10 +9,10 @@ set -e
 charsetf=`echo "$charset" | sed -e 's,:,-,g'`
 
 # iconv in one direction.
-./table-from "$charset" > tmp-"$charsetf".TXT
+$bindir/table-from "$charset" > tmp-"$charsetf".TXT
 
 # iconv in the other direction.
-./table-to "$charset" | sort > tmp-"$charsetf".INVERSE.TXT
+$bindir/table-to "$charset" | sort > tmp-"$charsetf".INVERSE.TXT
 
 # Check 1: charmap and iconv forward should be identical.
 cmp "${srcdir}"/"$charsetf".TXT tmp-"$charsetf".TXT 2> /dev/null
@@ -30,7 +30,7 @@ rm -f tmp-"$charsetf".TXT tmp-"$charsetf".INVERSE.TXT tmp-noprecomposed-"$charse
 exit 0
 # For a new encoding:
 # You can create the "$charsetf".TXT like this:
-#   ./table-from "$charset" > "$charsetf".TXT
+#   $bindir/table-from "$charset" > "$charsetf".TXT
 # You can create the "$charsetf".IRREVERSIBLE.TXT like this:
-#   ./table-to "$charset" | sort > "$charsetf".INVERSE.TXT
+#   $bindir/table-to "$charset" | sort > "$charsetf".INVERSE.TXT
 #   diff "$charsetf".TXT "$charsetf".INVERSE.TXT | grep '^[<>]' | sed -e 's,^. ,,' > "$charsetf".IRREVERSIBLE.TXT
