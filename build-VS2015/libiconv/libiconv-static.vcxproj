@@ -309,7 +309,6 @@
     <ClInclude Include="..\..\lib\mulelao.h" />
     <ClInclude Include="..\..\lib\nextstep.h" />
     <ClInclude Include="..\..\lib\pt154.h" />
-    <ClInclude Include="..\..\lib\relocatable.h" />
     <ClInclude Include="..\..\lib\riscos1.h" />
     <ClInclude Include="..\..\lib\rk1048.h" />
     <ClInclude Include="..\..\lib\shift_jisx0213.h" />
@@ -348,7 +347,6 @@
   <ItemGroup>
     <ClCompile Include="..\..\libcharset\lib\localcharset.c" />
     <ClCompile Include="..\..\lib\iconv.c" />
-    <ClCompile Include="..\..\lib\relocatable.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\lib\encodings.def" />

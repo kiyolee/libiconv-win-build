@@ -597,9 +597,6 @@
     <ClInclude Include="..\..\lib\pt154.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\lib\relocatable.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\lib\riscos1.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>

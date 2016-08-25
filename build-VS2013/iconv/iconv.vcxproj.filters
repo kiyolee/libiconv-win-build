@@ -52,7 +52,7 @@
       <Filter>Source Files\srclib\uniwidth</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\iconv.c">
-      <Filter>Header Files\src</Filter>
+      <Filter>Source Files\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

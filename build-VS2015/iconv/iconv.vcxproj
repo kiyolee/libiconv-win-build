@@ -140,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\iconv.h" />
-    <ClInclude Include="..\..\lib\relocatable.h" />
     <ClInclude Include="..\..\srclib\binary-io.h" />
     <ClInclude Include="..\..\srclib\gettext.h" />
     <ClInclude Include="..\..\srclib\localcharset.h" />

@@ -52,7 +52,7 @@
       <Filter>Source Files\srclib\uniwidth</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\iconv.c">
-      <Filter>Header Files\src</Filter>
+      <Filter>Source Files\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,9 +76,6 @@
     </ClInclude>
     <ClInclude Include="..\..\srclib\progname.h">
       <Filter>Header Files\srclib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\relocatable.h">
-      <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\srclib\safe-read.h">
       <Filter>Header Files\srclib</Filter>

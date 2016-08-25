@@ -597,9 +597,6 @@
     <ClInclude Include="..\..\lib\pt154.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\lib\relocatable.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\lib\riscos1.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
@@ -696,9 +693,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\lib\iconv.c">
-      <Filter>Source Files\lib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\lib\relocatable.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
     <ClCompile Include="..\..\libcharset\lib\localcharset.c">
