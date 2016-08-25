@@ -6,3 +6,7 @@ build*/libiconv/Debug
 build*/libiconv/Release
 build*/libiconv/x64/Debug
 build*/libiconv/x64/Release
+build*/tests/*/Debug
+build*/tests/*/Release
+build*/tests/*/x64/Debug
+build*/tests/*/x64/Release
