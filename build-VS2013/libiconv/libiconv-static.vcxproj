@@ -348,7 +348,6 @@
   <ItemGroup>
     <ClCompile Include="..\..\libcharset\lib\localcharset.c" />
     <ClCompile Include="..\..\lib\iconv.c" />
-    <ClCompile Include="..\..\lib\relocatable.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\lib\encodings.def" />

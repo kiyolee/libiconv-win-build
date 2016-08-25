@@ -698,9 +698,6 @@
     <ClCompile Include="..\..\lib\iconv.c">
       <Filter>Source Files\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\relocatable.c">
-      <Filter>Source Files\lib</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\libcharset\lib\localcharset.c">
       <Filter>Source Files\libcharset\lib</Filter>
     </ClCompile>

@@ -22,7 +22,7 @@
 /* #undef ENABLE_EXTRA */
 
 /* Define to 1 if the package shall run at any location in the filesystem. */
-#define ENABLE_RELOCATABLE 1
+/* #undef ENABLE_RELOCATABLE */
 
 /* Define to a type if <wchar.h> does not define. */
 /* #undef mbstate_t */

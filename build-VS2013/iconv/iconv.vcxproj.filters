@@ -77,9 +77,6 @@
     <ClInclude Include="..\..\srclib\progname.h">
       <Filter>Header Files\srclib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\lib\relocatable.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\srclib\safe-read.h">
       <Filter>Header Files\srclib</Filter>
     </ClInclude>
