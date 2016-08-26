@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0F27FE31-A7DB-4CB2-9682-0B7869B47DED}</ProjectGuid>
-    <RootNamespace>iconv</RootNamespace>
+    <RootNamespace>iconv-static</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{22C32C52-A7D5-4DAD-86BA-D45600168126}</ProjectGuid>
-    <RootNamespace>uniq-u</RootNamespace>
+    <ProjectGuid>{203E6E8E-1082-45BA-A6A0-92D20AFB0C6E}</ProjectGuid>
+    <RootNamespace>uniq-u-static</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

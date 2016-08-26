@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{46CAFE4A-B5BD-4422-ACC6-117D4AD041E2}</ProjectGuid>
-    <RootNamespace>libiconv-static</RootNamespace>
-    <ProjectName>libiconv-static</ProjectName>
+    <ProjectGuid>{F2A64E15-0313-4421-ACB3-82FBCDA936B4}</ProjectGuid>
+    <RootNamespace>libiconv</RootNamespace>
+    <ProjectName>libiconv</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
