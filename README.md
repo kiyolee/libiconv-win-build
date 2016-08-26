@@ -16,6 +16,7 @@ Windows command prompt based testing is far too complicated.
 To test, using cygwin (MSYS would probably work too):
 
 > cd libiconv-win-build/tests
+
 > make -f check-all-with-cygwin.mak check bindir={bindir}
 
 where {bindir} is some Visual Studio output directory
