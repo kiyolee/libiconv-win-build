@@ -69,6 +69,7 @@
       <SDLCheck>true</SDLCheck>
       <StringPooling>true</StringPooling>
       <PreprocessorDefinitions>LIBICONV_DLL;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -81,6 +82,7 @@
       <SDLCheck>true</SDLCheck>
       <StringPooling>true</StringPooling>
       <PreprocessorDefinitions>LIBICONV_DLL;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -95,6 +97,7 @@
       <SDLCheck>true</SDLCheck>
       <StringPooling>true</StringPooling>
       <PreprocessorDefinitions>LIBICONV_DLL;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -111,6 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <StringPooling>true</StringPooling>
       <PreprocessorDefinitions>LIBICONV_DLL;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
