@@ -22,16 +22,16 @@
 #define _LIBICONV_H
 
 #if BUILDING_LIBICONV
-#ifdef _DLL
+#if defined(_DLL) || defined(LIBICONV_DLL)
 #define LIBICONV_API __declspec(dllexport)
 #else
 #define LIBICONV_API
 #endif
 #else
-#ifdef LIBICONV_STATIC
-#define LIBICONV_API
-#else
+#if defined(LIBICONV_DLL) && !defined(LIBICONV_STATIC)
 #define LIBICONV_API __declspec(dllimport)
+#else
+#define LIBICONV_API
 #endif
 #endif
 

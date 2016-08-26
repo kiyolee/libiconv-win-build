@@ -29,7 +29,7 @@ extern "C" {
 
 
 /* String containing name the program is called with.  */
-extern DLL_VARIABLE const char *program_name;
+extern const char *program_name;
 
 /* Set program_name, based on argv[0].
    argv0 must be a string allocated with indefinite extent, and must not be
