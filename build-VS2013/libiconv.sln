@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libiconv-static", "libiconv\libiconv-static.vcxproj", "{46CAFE4A-B5BD-4422-ACC6-117D4AD041E2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libiconv-static", "libiconv-static\libiconv-static.vcxproj", "{46CAFE4A-B5BD-4422-ACC6-117D4AD041E2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iconv", "iconv\iconv.vcxproj", "{0F27FE31-A7DB-4CB2-9682-0B7869B47DED}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iconv-static", "iconv-static\iconv-static.vcxproj", "{0F27FE31-A7DB-4CB2-9682-0B7869B47DED}"
 	ProjectSection(ProjectDependencies) = postProject
 		{46CAFE4A-B5BD-4422-ACC6-117D4AD041E2} = {46CAFE4A-B5BD-4422-ACC6-117D4AD041E2}
 	EndProjectSection
