@@ -14,3 +14,8 @@ build*/tests/*/Debug
 build*/tests/*/Release
 build*/tests/*/x64/Debug
 build*/tests/*/x64/Release
+*.VC.db
+*.log
+*.opensdf
+*.sdf
+*~
