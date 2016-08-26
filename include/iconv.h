@@ -21,18 +21,14 @@
 #ifndef _LIBICONV_H
 #define _LIBICONV_H
 
+#if defined(LIBICONV_DLL) && !defined(LIBICONV_STATIC)
 #if BUILDING_LIBICONV
-#if defined(_DLL) || defined(LIBICONV_DLL)
 #define LIBICONV_API __declspec(dllexport)
 #else
-#define LIBICONV_API
-#endif
-#else
-#if defined(LIBICONV_DLL) && !defined(LIBICONV_STATIC)
 #define LIBICONV_API __declspec(dllimport)
+#endif
 #else
 #define LIBICONV_API
-#endif
 #endif
 
 #define _LIBICONV_VERSION 0x010E    /* version number: (major<<8) + minor */
