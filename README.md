@@ -2,7 +2,7 @@
 
 libiconv Windows build with Visual Studio.
 
-Current version is libiconv-1.14.
+This version is libiconv-1.14.
 
 See info-win-build for general information about the
 win-build effort.
