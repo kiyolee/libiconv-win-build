@@ -19,7 +19,13 @@
 #define _UNITYPES_H
 
 /* Get uint8_t, uint16_t, uint32_t.  */
+#if defined(_MSC_VER) && _MSC_VER >= 1600
 #include <stdint.h>
+#else
+typedef unsigned char uint8_t;
+typedef unsigned short uint16_t;
+typedef unsigned int uint32_t;
+#endif
 
 /* Type representing a Unicode character.  */
 typedef uint32_t ucs4_t;
