@@ -781,14 +781,6 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\lib\gb12345.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\lib\gb12345ext.h"
-					>
-				</File>
-				<File
 					RelativePath="..\..\lib\gb18030.h"
 					>
 				</File>
