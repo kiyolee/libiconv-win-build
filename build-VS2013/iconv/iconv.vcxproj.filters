@@ -34,9 +34,6 @@
     <Filter Include="Header Files\include">
       <UniqueIdentifier>{e3662637-2e08-4b03-8ae2-0d28dff5b720}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\lib">
-      <UniqueIdentifier>{83e8b3fb-ce1f-4dff-8d45-09bba4fc52f5}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\iconv_no_i18n.c">
