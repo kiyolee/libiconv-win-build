@@ -8,14 +8,10 @@ build-*/*/Release
 build-*/*/x64/Debug
 build-*/*/x64/Release
 build-*/Debug
-build-*/Debug-static
 build-*/Release
-build-*/Release-static
 build-*/tests/*/Debug
 build-*/tests/*/Release
 build-*/tests/*/x64/Debug
 build-*/tests/*/x64/Release
 build-*/x64/Debug
-build-*/x64/Debug-static
 build-*/x64/Release
-build-*/x64/Release-static
