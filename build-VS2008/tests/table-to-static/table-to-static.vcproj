@@ -20,7 +20,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)-static"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)\static"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="0"
@@ -63,7 +63,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(OutDir)\libiconv-static.lib"
+				AdditionalDependencies="$(OutDir)\..\libiconv-static.lib"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
 			/>
@@ -91,7 +91,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)-static"
+			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)\static"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="0"
@@ -135,7 +135,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(OutDir)\libiconv-static.lib"
+				AdditionalDependencies="$(OutDir)\..\libiconv-static.lib"
 				GenerateDebugInformation="true"
 				TargetMachine="17"
 			/>
@@ -163,7 +163,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)-static"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)\static"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="0"
@@ -207,7 +207,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(OutDir)\libiconv-static.lib"
+				AdditionalDependencies="$(OutDir)\..\libiconv-static.lib"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -237,7 +237,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)-static"
+			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)\static"
 			IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="0"
@@ -282,7 +282,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(OutDir)\libiconv-static.lib"
+				AdditionalDependencies="$(OutDir)\..\libiconv-static.lib"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
