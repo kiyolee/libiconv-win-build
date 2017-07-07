@@ -1,5 +1,5 @@
-/* lib/config.h.  Generated from config.h.in by configure.  */
-/* Copyright (C) 1999-2003, 2005, 2007, 2010 Free Software Foundation, Inc.
+/* lib/config.h.  Generated from lib/config.h.in by configure.  */
+/* Copyright (C) 1999-2003, 2005, 2007, 2010, 2012 Free Software Foundation, Inc.
    This file is part of the GNU LIBICONV Library.
 
    The GNU LIBICONV Library is free software; you can redistribute it
@@ -14,8 +14,7 @@
 
    You should have received a copy of the GNU Library General Public
    License along with the GNU LIBICONV Library; see the file COPYING.LIB.
-   If not, write to the Free Software Foundation, Inc., 51 Franklin Street,
-   Fifth Floor, Boston, MA 02110-1301, USA.  */
+   If not, see <http://www.gnu.org/licenses/>.  */
 
 
 /* Define to 1 to enable a few rarely used encodings. */
@@ -69,4 +68,16 @@
 
 /* Define to the value of ${prefix}, as a string. */
 #define INSTALLPREFIX "C:/libiconv"
+
+/* Define to '__inline__' or '__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
+
+/* Define to 'int' if <sys/types.h> does not define. */
+#undef mode_t
+
+/* Define as a signed type of the same size as size_t. */
+#undef ssize_t
 

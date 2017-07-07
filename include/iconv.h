@@ -13,8 +13,7 @@
 
    You should have received a copy of the GNU Library General Public
    License along with the GNU LIBICONV Library; see the file COPYING.LIB.
-   If not, write to the Free Software Foundation, Inc., 51 Franklin Street,
-   Fifth Floor, Boston, MA 02110-1301, USA.  */
+   If not, see <http://www.gnu.org/licenses/>.  */
 
 /* When installed, this file is called "iconv.h". */
 
@@ -31,7 +30,7 @@
 #define LIBICONV_API
 #endif
 
-#define _LIBICONV_VERSION 0x010E    /* version number: (major<<8) + minor */
+#define _LIBICONV_VERSION 0x010F    /* version number: (major<<8) + minor */
 
 extern LIBICONV_API int _libiconv_version; /* Likewise */
 
