@@ -12,6 +12,8 @@ if test -f "${srcdir}"/"$charsetf"-snippet.alt; then
   $bindir/iconv -f "$charset" -t UTF-8 < "${srcdir}"/"$charsetf"-snippet.alt > tmp-snippet
   cmp "${srcdir}"/"$charsetf"-snippet.UTF-8 tmp-snippet
   rc1=$?
+else
+  rc1=0
 fi
 $bindir/iconv -f "$charset" -t UTF-8 < "${srcdir}"/"$charsetf"-snippet > tmp-snippet
 cmp -s "${srcdir}"/"$charsetf"-snippet.UTF-8 tmp-snippet

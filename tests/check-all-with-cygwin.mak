@@ -119,6 +119,7 @@ check : all
 	env BINDIR=$(bindir) $(srcdir)/check-stateful $(srcdir) ISO-2022-JP
 	env BINDIR=$(bindir) $(srcdir)/check-stateful $(srcdir) ISO-2022-JP-2
 	env BINDIR=$(bindir) $(srcdir)/check-stateful $(srcdir) ISO-2022-JP-1
+	env BINDIR=$(bindir) $(srcdir)/check-stateful $(srcdir) ISO-2022-JP-MS
 	env BINDIR=$(bindir) $(srcdir)/check-stateless $(srcdir) EUC-CN
 	env BINDIR=$(bindir) $(srcdir)/check-stateless $(srcdir) GBK
 	env BINDIR=$(bindir) $(srcdir)/check-stateless $(srcdir) CP936
