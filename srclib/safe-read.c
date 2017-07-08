@@ -43,11 +43,6 @@
 
 #ifdef _WIN32
 #include <io.h>
-#ifdef _WIN64
-typedef __int64 ssize_t;
-#else
-typedef int ssize_t;
-#endif
 #endif
 
 #ifdef SAFE_WRITE
