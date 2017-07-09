@@ -1,14 +1,20 @@
 #!/bin/sh
 
-# Set environment variables for using MSVC 14,
+# Derived from README.windows in the original source
+# to support VS2008/2010/2013/2015/2017.
+
+# Set environment variables for using MSVC 10/11/12/14,
 # for creating native Windows executables.
 
 _VS2008=${_VS2008:=0}
 _VS2010=${_VS2010:=0}
 _VS2013=${_VS2013:=0}
-_VS2015=${_VS2015:=0}
+_VS2015=${_VS2015:=1} # default
 _VS2017=${_VS2017:=0}
 _TARGET_X64=${_TARGET_X64:=0}
+_DO_CONFIG=${_DO_CONFIG:=1}
+_DO_MAKE=${_DO_MAKE:=0}
+_DO_CHECK=${_DO_CHECK:=0}
 
 if [ "${_TARGET_X64}" -eq 1 ]; then
   ARCH=x64
@@ -110,15 +116,20 @@ win32_target=_WIN32_WINNT_VISTA   # possibly for MSVC >= 10.0
 win32_target=_WIN32_WINNT_WIN7    # possibly for MSVC >= 10.0
 win32_target=_WIN32_WINNT_WIN8    # possibly for MSVC >= 10.0
 
-./configure --host=${ARCH_HOST} --prefix=${INSTALL_PREFIX} \
-    CC="${_BUILD_CC} cl -nologo" \
-    CFLAGS="-MD" \
-    CXX="${_BUILD_CC} cl -nologo" \
-    CXXFLAGS="-MD" \
-    CPPFLAGS="-D_WIN32_WINNT=${win32_target} -I${INSTALL_PREFIX}/include" \
-    LDFLAGS="-L${INSTALL_PREFIX}/lib" \
-    LD="link" \
-    NM="dumpbin -symbols" \
-    STRIP=":" \
-    AR="${_BUILD_AR} lib" \
-    RANLIB=":"
+if [ "${_DO_CONFIG}" -eq 1 ]; then
+  ./configure --host=${ARCH_HOST} --prefix=${INSTALL_PREFIX} \
+      CC="${_BUILD_CC} cl -nologo" \
+      CFLAGS="-MD" \
+      CXX="${_BUILD_CC} cl -nologo" \
+      CXXFLAGS="-MD" \
+      CPPFLAGS="-D_WIN32_WINNT=${win32_target} -I${INSTALL_PREFIX}/include" \
+      LDFLAGS="-L${INSTALL_PREFIX}/lib" \
+      LD="link" \
+      NM="dumpbin -symbols" \
+      STRIP=":" \
+      AR="${_BUILD_AR} lib" \
+      RANLIB=":"
+fi
+
+[ "${_DO_MAKE}" -eq 1 ] && make
+[ "${_DO_CHECK}" -eq 1 ] && make check
