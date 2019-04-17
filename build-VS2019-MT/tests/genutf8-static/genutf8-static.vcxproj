@@ -22,7 +22,6 @@
     <ProjectGuid>{D9865C43-54E2-48CB-BC24-CC351DC8CF70}</ProjectGuid>
     <RootNamespace>genutf8-static</RootNamespace>
     <ProjectName>genutf8</ProjectName>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

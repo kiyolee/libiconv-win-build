@@ -22,7 +22,6 @@
     <ProjectGuid>{F2A64E15-0313-4421-ACB3-82FBCDA936B4}</ProjectGuid>
     <RootNamespace>libiconv</RootNamespace>
     <ProjectName>libiconv</ProjectName>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

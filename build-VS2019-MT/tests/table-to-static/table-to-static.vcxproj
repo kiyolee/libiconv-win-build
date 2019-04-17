@@ -22,7 +22,6 @@
     <ProjectGuid>{BA8A1D08-53EE-41FB-8B79-59B8A3A1FA2D}</ProjectGuid>
     <RootNamespace>table-to-static</RootNamespace>
     <ProjectName>table-to</ProjectName>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

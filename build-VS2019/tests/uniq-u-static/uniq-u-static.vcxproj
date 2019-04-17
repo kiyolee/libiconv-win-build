@@ -22,7 +22,6 @@
     <ProjectGuid>{203E6E8E-1082-45BA-A6A0-92D20AFB0C6E}</ProjectGuid>
     <RootNamespace>uniq-u-static</RootNamespace>
     <ProjectName>uniq-u</ProjectName>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
