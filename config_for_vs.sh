@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Derived from README.windows in the original source
+# Derived from INSTALL.windows in the original source
 # to support VS2008/2010/2013/2015/2017/2019.
 
 # Set environment variables for using MSVC 10/11/12/14,
