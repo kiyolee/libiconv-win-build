@@ -75,24 +75,24 @@ extern "C" {
 #endif
 
 
-/* Allocates descriptor for code conversion from encoding ‘fromcode’ to
-   encoding ‘tocode’. */
+/* Allocates descriptor for code conversion from encoding 'fromcode' to
+   encoding 'tocode'. */
 #ifndef LIBICONV_PLUG
 #define iconv_open libiconv_open
 #endif
 extern LIBICONV_API iconv_t iconv_open (const char* tocode, const char* fromcode);
 
-/* Converts, using conversion descriptor ‘cd’, at most ‘*inbytesleft’ bytes
-   starting at ‘*inbuf’, writing at most ‘*outbytesleft’ bytes starting at
-   ‘*outbuf’.
-   Decrements ‘*inbytesleft’ and increments ‘*inbuf’ by the same amount.
-   Decrements ‘*outbytesleft’ and increments ‘*outbuf’ by the same amount. */
+/* Converts, using conversion descriptor 'cd', at most '*inbytesleft' bytes
+   starting at '*inbuf', writing at most '*outbytesleft' bytes starting at
+   '*outbuf'.
+   Decrements '*inbytesleft' and increments '*inbuf' by the same amount.
+   Decrements '*outbytesleft' and increments '*outbuf' by the same amount. */
 #ifndef LIBICONV_PLUG
 #define iconv libiconv
 #endif
 extern LIBICONV_API size_t iconv (iconv_t cd, const char* * inbuf, size_t *inbytesleft, char* * outbuf, size_t *outbytesleft);
 
-/* Frees resources allocated for conversion descriptor ‘cd’. */
+/* Frees resources allocated for conversion descriptor 'cd'. */
 #ifndef LIBICONV_PLUG
 #define iconv_close libiconv_close
 #endif
@@ -134,8 +134,8 @@ typedef struct {
 #endif
 } iconv_allocation_t;
 
-/* Allocates descriptor for code conversion from encoding ‘fromcode’ to
-   encoding ‘tocode’ into preallocated memory. Returns an error indicator
+/* Allocates descriptor for code conversion from encoding 'fromcode' to
+   encoding 'tocode' into preallocated memory. Returns an error indicator
    (0 or -1 with errno set). */
 #define iconv_open_into libiconv_open_into
 extern LIBICONV_API int iconv_open_into (const char* tocode, const char* fromcode,
