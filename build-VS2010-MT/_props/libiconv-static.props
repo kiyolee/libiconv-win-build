@@ -9,7 +9,6 @@
     <ClCompile>
       <PreprocessorDefinitions>BUILDING_LIBICONV;LIBICONV_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\include;..\..\lib;..\..\srclib</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <OmitDefaultLibName>true</OmitDefaultLibName>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -18,7 +17,6 @@
     <ClCompile>
       <PreprocessorDefinitions>BUILDING_LIBICONV;LIBICONV_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\include;..\..\lib;..\..\srclib</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <OmitDefaultLibName>true</OmitDefaultLibName>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -27,7 +25,6 @@
     <ClCompile>
       <PreprocessorDefinitions>BUILDING_LIBICONV;LIBICONV_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\include;..\..\lib;..\..\srclib</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <OmitDefaultLibName>true</OmitDefaultLibName>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -36,7 +33,6 @@
     <ClCompile>
       <PreprocessorDefinitions>BUILDING_LIBICONV;LIBICONV_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\include;..\..\lib;..\..\srclib</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <OmitDefaultLibName>true</OmitDefaultLibName>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
     </ClCompile>
