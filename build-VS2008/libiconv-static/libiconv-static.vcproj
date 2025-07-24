@@ -789,7 +789,11 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\lib\gb18030.h"
+					RelativePath="..\..\lib\gb18030_2005.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\lib\gb18030_2022.h"
 					>
 				</File>
 				<File

@@ -378,13 +378,16 @@
     <ClInclude Include="..\..\lib\gb2312.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\lib\gb18030.h">
-      <Filter>Header Files\lib</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\lib\gb18030ext.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\gb18030uni.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\gb18030_2005.h">
+      <Filter>Header Files\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\gb18030_2022.h">
       <Filter>Header Files\lib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\gbk.h">

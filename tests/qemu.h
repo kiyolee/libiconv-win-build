@@ -1,5 +1,5 @@
 /* Determine whether the current process is running under QEMU.
-   Copyright (C) 2021-2022 Free Software Foundation, Inc.
+   Copyright (C) 2021-2024 Free Software Foundation, Inc.
 
    This file is free software: you can redistribute it and/or modify
    it under the terms of the GNU Lesser General Public License as
@@ -16,15 +16,6 @@
 
 /* Written by Bruno Haible <bruno@clisp.org>, 2021.  */
 
-#ifndef __cplusplus
-#if !defined(_MSC_VER) || _MSC_VER >= 1700
-#include <stdbool.h>
-#else
-typedef int bool;
-#define false 0
-#define true 1
-#endif
-#endif
 #ifdef __linux__
 # include <fcntl.h>
 # include <string.h>

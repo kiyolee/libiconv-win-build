@@ -199,9 +199,10 @@
     <ClInclude Include="..\..\lib\euc_tw.h" />
     <ClInclude Include="..\..\lib\flags.h" />
     <ClInclude Include="..\..\lib\flushwc.h" />
-    <ClInclude Include="..\..\lib\gb18030.h" />
     <ClInclude Include="..\..\lib\gb18030ext.h" />
     <ClInclude Include="..\..\lib\gb18030uni.h" />
+    <ClInclude Include="..\..\lib\gb18030_2005.h" />
+    <ClInclude Include="..\..\lib\gb18030_2022.h" />
     <ClInclude Include="..\..\lib\gb2312.h" />
     <ClInclude Include="..\..\lib\gbk.h" />
     <ClInclude Include="..\..\lib\gbkext1.h" />
