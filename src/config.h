@@ -14,9 +14,6 @@
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
 
-/* Define if no multithread safety and no multithreading is desired. */
-/* #undef AVOID_ANY_THREADS */
-
 /* Define to the number of bits in type 'ptrdiff_t'. */
 /* #undef BITSIZEOF_PTRDIFF_T */
 
@@ -83,10 +80,6 @@
 /* #undef GNULIB_LOCALEDIR */
 
 /* Define to a C preprocessor expression that evaluates to 1 or 0, depending
-   whether the gnulib module lock shall be considered present. */
-#define GNULIB_LOCK 1
-
-/* Define to a C preprocessor expression that evaluates to 1 or 0, depending
    whether the gnulib module lstat shall be considered present. */
 #define GNULIB_LSTAT 1
 
@@ -113,9 +106,8 @@
 /* Define to 1 if you want the FILE stream functions getc, putc, etc. to use
    unlocked I/O if available, throughout the package. Unlocked I/O can improve
    performance, sometimes dramatically. But unlocked I/O is safe only in
-   single-threaded programs, as well as in multithreaded programs for which
-   you can guarantee that every FILE stream, including stdin, stdout, stderr,
-   is used only in a single thread. */
+   processes in which two threads never simultaneously access the same FILE
+   stream. */
 #define GNULIB_STDIO_SINGLE_THREAD 1
 
 /* Define to a C preprocessor expression that evaluates to 1 or 0, depending
@@ -200,9 +192,6 @@
 
 /* Define to 1 when the gnulib module printf should be tested. */
 #define GNULIB_TEST_PRINTF 1
-
-/* Define to 1 when the gnulib module pthread-once should be tested. */
-#define GNULIB_TEST_PTHREAD_ONCE 1
 
 /* Define to 1 when the gnulib module putc should be tested. */
 #define GNULIB_TEST_PUTC 1
@@ -421,6 +410,9 @@
 /* Define to 1 if you have the <dlfcn.h> header file. */
 /* #undef HAVE_DLFCN_H */
 
+/* Define to 1 if dlopen and dlsym are available. */
+/* #undef HAVE_DLOPEN */
+
 /* Define if you have the declaration of environ. */
 #define HAVE_ENVIRON_DECL 1
 
@@ -519,28 +511,6 @@
    concept. */
 #define HAVE_MSVC_INVALID_PARAMETER_HANDLER 1
 
-/* Define if you have the <pthread.h> header and the POSIX threads API. */
-/* #undef HAVE_PTHREAD_API */
-
-/* Define to 1 if you have the <pthread.h> header file. */
-/* #undef HAVE_PTHREAD_H */
-
-/* Define if the <pthread.h> defines PTHREAD_MUTEX_RECURSIVE. */
-/* #undef HAVE_PTHREAD_MUTEX_RECURSIVE */
-
-/* Define if the POSIX multithreading library has read/write locks. */
-/* #undef HAVE_PTHREAD_RWLOCK */
-
-/* Define if the 'pthread_rwlock_rdlock' function prefers a writer to a
-   reader. */
-/* #undef HAVE_PTHREAD_RWLOCK_RDLOCK_PREFER_WRITER */
-
-/* Define to 1 if the system has the type 'pthread_spinlock_t'. */
-/* #undef HAVE_PTHREAD_SPINLOCK_T */
-
-/* Define to 1 if the system has the type 'pthread_t'. */
-/* #undef HAVE_PTHREAD_T */
-
 /* Define to 1 if you have the 'raise' function. */
 #define HAVE_RAISE 1
 
@@ -561,9 +531,6 @@
 
 /* Define to 1 if you have the 'realpath' function. */
 /* #undef HAVE_REALPATH */
-
-/* Define to 1 if you have the <sched.h> header file. */
-/* #undef HAVE_SCHED_H */
 
 /* Define to 1 if you have the <sdkddkver.h> header file. */
 #define HAVE_SDKDDKVER_H 1
@@ -588,6 +555,9 @@
 
 /* Define to 1 if 'wint_t' is a signed integer type. */
 /* #undef HAVE_SIGNED_WINT_T */
+
+/* Define to 1 if you have the 'sigprocmask' function. */
+/* #undef HAVE_SIGPROCMASK */
 
 /* Define to 1 if the system has the type 'sigset_t'. */
 /* #undef HAVE_SIGSET_T */
@@ -671,12 +641,6 @@
 /* Define to 1 if you have the <sys/types.h> header file. */
 #define HAVE_SYS_TYPES_H 1
 
-/* Define to 1 if you have the `thrd_create' function. */
-/* #undef HAVE_THRD_CREATE */
-
-/* Define to 1 if you have the <threads.h> header file. */
-/* #undef HAVE_THREADS_H */
-
 /* Define to 1 if you have the `tsearch' function. */
 /* #undef HAVE_TSEARCH */
 
@@ -705,13 +669,6 @@
 /* Define to 1 if you have the 'wcrtomb' function. */
 #define HAVE_WCRTOMB 1
 
-/* Define to 1 if the compiler and linker support weak declarations of
-   symbols. */
-/* #undef HAVE_WEAK_SYMBOLS */
-
-/* Define to 1 if <locale.h> defines the _locale_t type. */
-#define HAVE_WINDOWS_LOCALE_T 1
-
 /* Define to 1 if you have the <winsock2.h> header file. */
 #define HAVE_WINSOCK2_H 1
 
@@ -726,9 +683,6 @@
 
 /* Define to 1 if O_NOFOLLOW works, 0 otherwise. */
 #define HAVE_WORKING_O_NOFOLLOW 0
-
-/* Define to 1 if you have the <xlocale.h> header file. */
-/* #undef HAVE_XLOCALE_H */
 
 /* Define to 1 if you have the '_NSGetExecutablePath' function. */
 /* #undef HAVE__NSGETEXECUTABLEPATH */
@@ -902,7 +856,7 @@
 #define PACKAGE_NAME "libiconv"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libiconv 1.19"
+#define PACKAGE_STRING "libiconv 1.19.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libiconv"
@@ -911,14 +865,11 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.19"
+#define PACKAGE_VERSION "1.19.1"
 
 /* Define to the type that is the result of default argument promotions of
    type mode_t. */
 #define PROMOTED_MODE_T mode_t
-
-/* Define if the pthread_in_use() detection is hard. */
-/* #undef PTHREAD_IN_USE_DETECTION_HARD */
 
 /* Define to l, ll, u, ul, ull, etc., as suitable for constants of type
    'ptrdiff_t'. */
@@ -977,13 +928,6 @@
 #define USER_LABEL_PREFIX _
 #endif
 
-/* Define if the combination of the ISO C and POSIX multithreading APIs can be
-   used. */
-/* #undef USE_ISOC_AND_POSIX_THREADS */
-
-/* Define if the ISO C multithreading library can be used. */
-/* #undef USE_ISOC_THREADS */
-
 /* Define to enable the declarations of ISO C 23 Annex K types and functions.  */
 #if !(defined __STDC_WANT_LIB_EXT1__ && __STDC_WANT_LIB_EXT1__)
 #undef/**/__STDC_WANT_LIB_EXT1__
@@ -991,20 +935,13 @@
 #endif
 
 
-/* Define if the POSIX multithreading library can be used. */
-/* #undef USE_POSIX_THREADS */
-
-/* Define if references to the POSIX multithreading library are satisfied by
-   libc. */
-/* #undef USE_POSIX_THREADS_FROM_LIBC */
-
-/* Define if references to the POSIX multithreading library should be made
-   weak. */
-/* #undef USE_POSIX_THREADS_WEAK */
-
 /* Enable extensions on AIX, Interix, z/OS.  */
 #ifndef _ALL_SOURCE
 # define _ALL_SOURCE 1
+#endif
+/* Enable extensions on Cosmopolitan Libc. */
+#ifndef _COSMO_SOURCE
+# define _COSMO_SOURCE 1
 #endif
 /* Enable general extensions on macOS.  */
 #ifndef _DARWIN_C_SOURCE
@@ -1097,11 +1034,8 @@
 /* An alias of GNULIB_STDIO_SINGLE_THREAD. */
 #define USE_UNLOCKED_IO GNULIB_STDIO_SINGLE_THREAD
 
-/* Define if the native Windows multithreading API can be used. */
-#define USE_WINDOWS_THREADS 1
-
 /* Version number of package */
-#define VERSION "1.19"
+#define VERSION "1.19.1"
 
 /* Define to l, ll, u, ul, ull, etc., as suitable for constants of type
    'wchar_t'. */
@@ -1155,9 +1089,6 @@
 
 /* Define to 1 on platforms where this makes off_t a 64-bit type. */
 /* #undef _LARGE_FILES */
-
-/* Define to 1 on Solaris. */
-/* #undef _LCONV_C99 */
 
 /* Define so that AIX headers are more compatible with GNU/Linux. */
 #define _LINUX_SOURCE_COMPAT 1
@@ -1437,11 +1368,9 @@
    we cannot omit the storage-class specifier.  Therefore, the following rule
    applies:
      * The macros
-         _GL_ATTRIBUTE_CONST
          _GL_ATTRIBUTE_DEPRECATED
          _GL_ATTRIBUTE_MAYBE_UNUSED
          _GL_ATTRIBUTE_NODISCARD
-         _GL_ATTRIBUTE_PURE
          _GL_ATTRIBUTE_REPRODUCIBLE
          _GL_ATTRIBUTE_UNSEQUENCED
        which may expand to bracket syntax [[...]], must come first, before the
@@ -1573,6 +1502,22 @@
 #  define _GL_ATTRIBUTE_CONST __attribute__ ((__const__))
 # else
 #  define _GL_ATTRIBUTE_CONST
+# endif
+#endif
+
+/* _GL_ATTRIBUTE_COUNTED_BY (C) declares that the number of elements of
+   the field is given by C, which must be another field in the same struct.
+   The programmer is responsible for guaranteeing some invariants; see
+   <https://gcc.gnu.org/onlinedocs/gcc/Common-Attributes.html> for details.  */
+/* Applies to struct fields of type array or pointer (to data).  */
+#ifndef _GL_ATTRIBUTE_COUNTED_BY
+/* This attributes is supported
+     - for fields of array type: by gcc >= 16, clang >= 18,
+     - for fields of pointer type: by gcc >= 16.2, clang >= 19.  */
+# if _GL_GNUC_PREREQ (16, 2) || (defined __clang__ && __clang_major__ >= 19)
+#  define _GL_ATTRIBUTE_COUNTED_BY(c) __attribute__ ((__counted_by__ (c)))
+# else
+#  define _GL_ATTRIBUTE_COUNTED_BY(c)
 # endif
 #endif
 
@@ -2031,12 +1976,12 @@
 # endif
 #endif
 
-/* The following attributes enable detection of multithread-safety problems
+/* The following attributes enable detection of thread safety problems
    and resource leaks at compile-time, by clang ≥ 15, when the warning option
    -Wthread-safety is enabled.  For usage, see
    <https://clang.llvm.org/docs/ThreadSafetyAnalysis.html>.  */
 #ifndef _GL_ATTRIBUTE_CAPABILITY_TYPE
-# if __clang_major__ >= 15
+# if defined __clang__ && __clang_major__ >= 15
 #  define _GL_ATTRIBUTE_CAPABILITY_TYPE(concept) \
      __attribute__ ((__capability__ (concept)))
 # else
@@ -2044,7 +1989,7 @@
 # endif
 #endif
 #ifndef _GL_ATTRIBUTE_ACQUIRE_CAPABILITY
-# if __clang_major__ >= 15
+# if defined __clang__ && __clang_major__ >= 15
 #  define _GL_ATTRIBUTE_ACQUIRE_CAPABILITY(resource) \
      __attribute__ ((__acquire_capability__ (resource)))
 # else
@@ -2052,7 +1997,7 @@
 # endif
 #endif
 #ifndef _GL_ATTRIBUTE_RELEASE_CAPABILITY
-# if __clang_major__ >= 15
+# if defined __clang__ && __clang_major__ >= 15
 #  define _GL_ATTRIBUTE_RELEASE_CAPABILITY(resource) \
      __attribute__ ((__release_capability__ (resource)))
 # else
@@ -2115,9 +2060,14 @@
 #define pid_t __int64
 
 /* Define to the equivalent of the C99 'restrict' keyword, or to
-   nothing if this is not supported.  Do not define if restrict is
-   supported only directly.  */
+   nothing if this is not supported.  In particular it is not supported
+   in MSVC 14.44 and in g++ 7 on Solaris 11, although these compilers
+   define __STDC_VERSION__ to 199901L.
+   Do not define if restrict is supported directly.  */
+#if ! (defined __STDC_VERSION__ && 199901L <= __STDC_VERSION__ \
+       && !defined _MSC_VER && !defined __cplusplus)
 #define restrict /**/
+#endif
 /* Work around a bug in older versions of Sun C++, which did not
    #define __restrict__ or support _Restrict or __restrict__
    even though the corresponding Sun C compiler ended up with
@@ -2128,6 +2078,31 @@
 # define _Restrict
 # define __restrict__
 #endif
+
+/* Sanitizer features.  */
+#ifdef __has_feature
+# if !defined __SANITIZE_ADDRESS__ && __has_feature (address_sanitizer)
+#  define __SANITIZE_ADDRESS__ 1
+# endif
+# if !defined __SANITIZE_HWADDRESS__ && __has_feature (hwaddress_sanitizer)
+#  define __SANITIZE_HWADDRESS__ 1
+# endif
+# if !defined __SANITIZE_LEAK__ && __has_feature (leak_sanitizer)
+#  define __SANITIZE_LEAK__ 1
+# endif
+# if !defined __SANITIZE_THREAD__ && __has_feature (thread_sanitizer)
+#  define __SANITIZE_THREAD__ 1
+# endif
+  /* Although the following sanitizers are in Clang not GCC,
+     define GCC-like macro names for consistency and convenience.  */
+# if !defined __SANITIZE_MEMORY__ && __has_feature (memory_sanitizer)
+#  define __SANITIZE_MEMORY__ 1
+# endif
+# if !defined __SANITIZE_SCUDO__ && __has_feature (scudo_sanitizer)
+#  define __SANITIZE_SCUDO__ 1
+# endif
+#endif
+
 
 /* Define as 'unsigned int' if <stddef.h> doesn't define. */
 /* #undef size_t */
